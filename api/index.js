@@ -27,6 +27,13 @@ app.get("/", (req, res) => {
     message: "Your server is up and running....",
   });
 });
+app.get("/custom", (req, res) => {
+  console.log("Custom endpoint accessed");
+  return res.json({
+    success: true,
+    message: "This is a custom endpoint!",
+  });
+});
 app.listen(PORT, () => {
   console.log(`Server listening at http://localhost:${PORT}`);
 });
